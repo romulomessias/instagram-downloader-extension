@@ -1,0 +1,37 @@
+{
+    "name": "instagram Image Downloader",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "An Extension to download images from Instagram.",
+    "icons": {
+        "128": "icons/icon128x128.png"
+    },
+    "web_accessible_resources": [
+        "images/*.jpeg"
+    ],
+    "permissions": [
+        "activeTab",
+        "downloads",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "background": {
+        "persistent": false,
+        "scripts": [
+            "background/index.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.instagram.com/p/*"
+            ],
+            "js": [
+                "content-scripts/content.js"
+            ],
+            "css": [
+                "content-scripts/content.css"
+            ]
+        }
+    ]
+}

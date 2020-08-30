@@ -1,0 +1,35 @@
+.my-content {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1000;
+    display: flex;
+    margin: auto;
+    right: 0px;
+    bottom: 0px;
+    opacity:  0;
+}
+
+.my-content:hover {
+    opacity:  1;
+    background: rgba(0, 0, 0, 0.15);
+}   
+ .my-content:hover > button {
+    width: 128px;
+    height: 32px;
+    background-color: black;
+    display: block;
+    margin: auto;
+    margin-bottom: 48px;
+    border: none;
+    border-radius: 8px;
+}
+
+.my-content > button:hover {
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.my-content > button {
+    color: white;
+    display: none;
+}
